@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=El+Messiri:wght@400..700&display=swap');
+
+
+/* =====Main code===== */
+:root {
+    --background: #ece7e2;
+    --main-color-A: #65bdb2;
+    --main-color-B: #13547a;
+    --text-color: #888888;
+    --colorB: #3f220963;
+    --main-font: "El Messiri", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font); 
+}
+body{
+    background-color: #13547a27;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* =======Main code====== */
+/* ==========HEADER========== */
+/* ======NAVIGATION====== */
+header{
+    width: 100%;
+    height: 100vh;
+    
+    /* تنسيقات إضافية للشكل */
+    border-radius: 0 0 120px 120px;
+
+}
+.toggle:hover{
+    scale: 1;
+    color: var(--main-color-B);
+}
+.toggle:active{
+    scale: 0.95;
+}
+.toggle{
+    display: block;
+    text-align: end;
+    padding: 10px;
+    color: var(--background);
+    font-size: 40px;
+    cursor: pointer;
+    transition: 1s;
+    transition: scale .2 ease ;
+}
+/* ==========DROPDOWIN MENU========= */
+.dropdowin{
+    position: absolute;
+    right: 32px;
+    top: 80px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdowin.open{
+    height: 300px;
+}
+.dropdowin li a{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+/* ==============HOVER============== */
+nav ul li a:hover,
+.dropdowin li a:hover{
+    color: var(--main-color-B);
+}
+
+/* ==========END NAVIGATION========= */
+/* ===========START HERO============ */
+.all2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+}
+.hero{
+    width: 50%;
+    text-align: center;
+    margin-top: 80px;
+    
+
+}
+.hero .logo{
+    width: 100%;
+}
+.hero .logo img{
+    width: 90%;
+}
+.hero h5{
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+
+
+
+.call{
+    width: 50%;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 45px;
+    
+}
+.call .icon i{
+    margin: 10px;
+    transition: 0.2s;
+}
+.call .icon i:hover{
+    font-size: 50px;
+    margin-top: -15px;
+}
+.call button{
+    align-items: center;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none; 
+    border-radius: 40px;
+    background-color: rgb(5, 175, 5);
+    color: black;
+    transition: 0.6s;   
+}
+.call button i{
+    font-size: 30px;
+    margin-top: 5px;
+}
+.call .phone{
+    width: 180px;
+}
+.call .whats{
+    width: 250px;
+}
+.call .phone:hover{
+    width: 190px; 
+}
+.call .whats:hover{
+    width: 260px;
+}
+.call button:hover{
+    background-color: rgb(0, 255, 0);
+    font-size: 24px;
+}
+
+
+/* ==================End Header=============== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE DESIGN */ 
+
+@media(max-width: 800px){
+    .dropdowin{
+        left: 32px;
+        width: unset;
+    }
+    .options-topic{
+    justify-content: space-around;
+    width: 100%;
+    }
+    .all2{
+    display: contents;
+    justify-content: center;
+    text-align: center;
+    }
+    .call,
+    .hero{
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+
+    .hero h5{
+        font-size: 20px;
+    }
+    /* ================================== */
+}
