@@ -34,8 +34,12 @@ a{
 header{
     width: 100%;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #38375f;
+    background-image: linear-gradient(to top right, #38375f 60%,#00bac0 40%);
+    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(/img/1234.jfif);     */
     
-    /* تنسيقات إضافية للشكل */
     border-radius: 0 0 120px 120px;
 
 }
@@ -81,15 +85,25 @@ header{
     font-size: 20px;
     transition: 0.4s;
 }
+.dropdowin .active{
+    font-size: 22px;
+    color: cornsilk;
+
+}
 
 /* ==============HOVER============== */
 nav ul li a:hover,
 .dropdowin li a:hover{
-    color: var(--main-color-B);
+    font-size: 23px;
+    color: cornsilk;
+    
 }
 
 /* ==========END NAVIGATION========= */
 /* ===========START HERO============ */
+
+
+
 .all2{
     width: 100%;
     display: flex;
@@ -105,9 +119,15 @@ nav ul li a:hover,
 }
 .hero .logo{
     width: 100%;
+    margin: auto;
+
+
 }
 .hero .logo img{
-    width: 90%;
+    width: 400px;
+    height: 40vh;
+    border-radius: 50% 50% 0 0;
+
 }
 .hero h5{
     font-size: 30px;
@@ -128,10 +148,12 @@ nav ul li a:hover,
 .call .icon i{
     margin: 10px;
     transition: 0.2s;
+    color: aliceblue;
 }
 .call .icon i:hover{
     font-size: 50px;
     margin-top: -15px;
+    color: #13547a;
 }
 .call button{
     align-items: center;
@@ -212,9 +234,14 @@ nav ul li a:hover,
     justify-content: center;
     text-align: center;
     }
+    .hero .logo img{
+    width: 200px;
+    height: 20vh;
+
+}
     .call,
     .hero{
-        width: 50%;
+        width: 70%;
         text-align: center;
         margin: 0 auto;
         
@@ -224,4 +251,30 @@ nav ul li a:hover,
         font-size: 20px;
     }
     /* ================================== */
+
+.call button{
+    height: 35px;
+    font-size: 16px;
+}
+.call button i{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.call .phone{
+    width: 140px;
+}
+.call .whats{
+    width: 180px;
+}
+
+.call .phone:hover{
+    width: 150px; 
+}
+.call .whats:hover{
+    width: 190px;
+}
+.call button:hover{
+    background-color: rgb(0, 255, 0);
+    font-size: 18px;
+}
 }
