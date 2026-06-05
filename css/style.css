@@ -63,7 +63,7 @@ header {
   background-image: linear-gradient(to top right, #38375f 60%, #00bac0 40%);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/img/Gemini_Generated_Image_l0czw2l0czw2l0cz.png);
+    url(/img/bg.png);
   border-radius: 0 0 120px 120px;
 }
 .toggle {
@@ -143,6 +143,7 @@ nav ul li a:hover,
   margin-top: 40px;
 }
 .hero .logo img {
+    margin: auto;
   width: 600px;
   filter: drop-shadow(#ffffff 4px 4px 20px);
 }
@@ -287,7 +288,16 @@ nav ul li a:hover,
   justify-content: space-around;
   font-size: 30px;
 }
-
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
+/* ================= */
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1080px) {
@@ -299,13 +309,16 @@ nav ul li a:hover,
     justify-content: space-around;
     width: 100%;
   }
+  header{
+      height: 70vh;
+  }
   .all2 {
     display: contents;
     justify-content: center;
     text-align: center;
   }
   .hero .logo img {
-    width: 200px;
+    width: 250px;
     height: 20vh;
     z-index: -1;
   }
