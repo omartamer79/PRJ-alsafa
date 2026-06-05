@@ -1,280 +1,407 @@
-@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=El+Messiri:wght@400..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&family=El+Messiri:wght@400..700&display=swap");
 
 /* =====Main code===== */
 :root {
-    --background: #ece7e2;
-    --main-color-A: #65bdb2;
-    --main-color-B: #13547a;
-    --text-color: #888888;
-    --colorB: #3f220963;
-    --main-font: "El Messiri", sans-serif;
+  --background: #ece7e2;
+  --main-color-A: #65bdb2;
+  --main-color-B: #13547a;
+  --text-color: #888888;
+  --colorB: #3f220963;
+  --main-font: "El Messiri", sans-serif;
 }
-*{
-    margin: 0;
-    padding: 0;
-    font-family: var(--main-font); 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
 }
-body{
-    background-color: #13547a27;
+body {
+  background: #00ff2a1c;
 }
-ul{
-    display: flex;
+ul {
+  display: flex;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
+}
+.conection {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.conection button {
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(5, 175, 5);
+  color: black;
+  transition: 0.5s;
+}
+.conection button:hover {
+  width: 55px;
+  background-color: rgb(0, 255, 0);
+  font-size: 24px;
+  box-shadow: rgb(0, 255, 0) 1px 1px 20px;
 }
 /* =======Main code====== */
 /* ==========HEADER========== */
 /* ======NAVIGATION====== */
-header{
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #38375f;
-    background-image: linear-gradient(to top right, #38375f 60%,#00bac0 40%);
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(/img/1234.jfif);     */
-    
-    border-radius: 0 0 120px 120px;
+header {
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #38375f;
+  background-image: linear-gradient(to top right, #38375f 60%, #00bac0 40%);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/img/Gemini_Generated_Image_l0czw2l0czw2l0cz.png);
+  border-radius: 0 0 120px 120px;
+}
+.toggle {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  display: block;
+  text-align: end;
+  padding: 10px;
+  color: #636363;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 1s;
+  transition: scale 0.2 ease;
+}
+.toggle:hover {
+  scale: 1;
+  color: rgb(5, 175, 5);
+}
+.toggle:active {
+  scale: 0.95;
+}
 
-}
-.toggle:hover{
-    scale: 1;
-    color: var(--main-color-B);
-}
-.toggle:active{
-    scale: 0.95;
-}
-.toggle{
-    display: block;
-    text-align: end;
-    padding: 10px;
-    color: var(--background);
-    font-size: 40px;
-    cursor: pointer;
-    transition: 1s;
-    transition: scale .2 ease ;
-}
 /* ==========DROPDOWIN MENU========= */
-.dropdowin{
-    position: absolute;
-    right: 32px;
-    top: 80px;
-    height: 0;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.dropdowin {
+  z-index: 3;
+  position: fixed;
+  right: 32px;
+  top: 80px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.dropdowin.open{
-    height: 300px;
+.dropdowin.open {
+  height: 300px;
 }
-.dropdowin li a{
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.4s;
+.dropdowin li a {
+  padding-top: 20px;
+  color: rgb(5, 175, 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.4s;
 }
-.dropdowin .active{
-    font-size: 22px;
-    color: cornsilk;
-
+.dropdowin .active {
+  font-size: 22px;
+  color: #1eff00;
+  text-shadow: #1eff00 1px 1px 20px;
 }
 
 /* ==============HOVER============== */
 nav ul li a:hover,
-.dropdowin li a:hover{
-    font-size: 23px;
-    color: cornsilk;
-    
+.dropdowin li a:hover {
+  font-size: 23px;
+  color: #1eff00;
+  text-shadow: #1eff00 1px 1px 20px;
 }
 
 /* ==========END NAVIGATION========= */
 /* ===========START HERO============ */
 
-
-
-.all2{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    direction: ltr;
+.all2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  direction: ltr;
 }
-.hero{
-    width: 50%;
-    text-align: center;
-    margin-top: 80px;
-    
-
+.hero {
+  width: 50%;
+  text-align: center;
+  margin-top: 40px;
 }
-.hero .logo{
-    width: 100%;
-    margin: auto;
-
-
+.hero .logo img {
+  width: 600px;
+  filter: drop-shadow(#ffffff 4px 4px 20px);
 }
-.hero .logo img{
-    width: 400px;
-    height: 40vh;
-    border-radius: 50% 50% 0 0;
-
-}
-.hero h5{
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: black;
+.hero p {
+  font-size: 13px;
+  margin: 20px;
+  color: aliceblue;
+  line-height: 2;
 }
 
-
-
-
-.call{
-    width: 50%;
-    text-align: center;
-    margin-top: 300px;
-    font-size: 45px;
-    
+.call {
+  width: 50%;
+  text-align: center;
+  margin-top: 150px;
+  font-size: 45px;
 }
-.call .icon i{
-    margin: 10px;
-    transition: 0.2s;
-    color: aliceblue;
+.call .icon i {
+  margin: 10px;
+  transition: 0.2s;
+  color: aliceblue;
 }
-.call .icon i:hover{
-    font-size: 50px;
-    margin-top: -15px;
-    color: #13547a;
+.call .icon i:hover {
+  font-size: 55px;
+  margin-top: -15px;
+  color: rgb(5, 175, 5);
 }
-.call button{
-    align-items: center;
-    height: 50px;
-    font-size: 22px;
-    font-weight: 600;
-    border: none; 
-    border-radius: 40px;
-    background-color: rgb(5, 175, 5);
-    color: black;
-    transition: 0.6s;   
+.call button {
+  align-items: center;
+  height: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  background-color: rgb(5, 175, 5);
+  color: black;
+  transition: 0.8s;
 }
-.call button i{
-    font-size: 30px;
-    margin-top: 5px;
+.call button i {
+  font-size: 30px;
+  margin-top: 5px;
 }
-.call .phone{
-    width: 180px;
+.call .phone {
+  width: 180px;
 }
-.call .whats{
-    width: 250px;
+.call .whats {
+  width: 250px;
 }
-.call .phone:hover{
-    width: 190px; 
+.call .phone:hover {
+  width: 190px;
 }
-.call .whats:hover{
-    width: 260px;
+.call .whats:hover {
+  width: 260px;
 }
-.call button:hover{
-    background-color: rgb(0, 255, 0);
-    font-size: 24px;
+.call button:hover {
+  background-color: rgb(0, 255, 0);
+  font-size: 24px;
+  box-shadow: rgb(0, 255, 0) 1px 1px 20px;
 }
-
 
 /* ==================End Header=============== */
+/* ==================start all-repair=============== */
+.all-repair {
+  width: 100%;
+}
+.clean {
+  width: 100%;
+  margin-top: 130px;
+  background-image: linear-gradient(to bottom left, #ffffff00 50%, #078d0e 50%);
+}
+.move {
+  width: 100%;
+  padding-top: 20px;
+  background-image: linear-gradient(to bottom left, #078d0e 50%, #ffffff00 50%);
+}
+.all-move {
+  width: 80%;
+  margin: auto;
+}
+.all-clean {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.all-repair h1,
+.clean h1,
+.move h1,
+.conect h1 {
+  margin: 80px 0 50px;
+  text-align: center;
+  font-weight: 900;
+  color: #38375f;
+}
+.all-repair .re1 {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: -80px auto;
+}
+.all-repair .re1 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: #888888 3px 3px 9px;
+}
+.all-clean img {
+  width: 400px;
+  border-radius: 50%;
+  box-shadow: #888888 3px 3px 9px;
+}
+.all-move .imgs {
+  width: 100%;
+  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.all-move img {
+  /* margin: 0 90px; */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: #888888 3px 3px 9px;
+}
+.all-repair .re1 h5,
+.all-clean h5 {
+  padding: 100px;
+  direction: rtl;
+}
+.all-move .text {
+  font-size: larger;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  line-height: 2;
+}
 
+.all-conect {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
 
+/* RESPONSIVE DESIGN */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVE DESIGN */ 
-
-@media(max-width: 800px){
-    .dropdowin{
-        left: 32px;
-        width: unset;
-    }
-    .options-topic{
+@media (max-width: 1080px) {
+  .dropdowin {
+    left: 32px;
+    width: unset;
+  }
+  .options-topic {
     justify-content: space-around;
     width: 100%;
-    }
-    .all2{
+  }
+  .all2 {
     display: contents;
     justify-content: center;
     text-align: center;
-    }
-    .hero .logo img{
+  }
+  .hero .logo img {
     width: 200px;
     height: 20vh;
+    z-index: -1;
+  }
+  .call,
+  .hero {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-}
-    .call,
-    .hero{
-        width: 70%;
-        text-align: center;
-        margin: 0 auto;
-        
-    }
-
-    .hero h5{
-        font-size: 20px;
-    }
-    /* ================================== */
-
-.call button{
+  .hero p {
+    font-size: 7px;
+    margin: 20px;
+    color: aliceblue;
+    line-height: 1.3;
+  }
+  /* ================================== */
+  .call button {
     height: 35px;
     font-size: 16px;
-}
-.call button i{
+  }
+  .call button i {
     font-size: 20px;
     margin-top: 5px;
-}
-.call .phone{
+  }
+  .call .icon i {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+  .call .phone {
     width: 140px;
-}
-.call .whats{
+  }
+  .call .whats {
     width: 180px;
-}
+  }
 
-.call .phone:hover{
-    width: 150px; 
-}
-.call .whats:hover{
+  .call .phone:hover {
+    width: 150px;
+  }
+  .call .whats:hover {
     width: 190px;
-}
-.call button:hover{
+  }
+  .call button:hover {
     background-color: rgb(0, 255, 0);
     font-size: 18px;
-}
+  }
+  /* ============================================ */
+
+  .all-repair h1,
+  .clean h1 {
+    margin: 80px 0 50px;
+  }
+  .all-repair .re1,
+  .all-clean,
+  .all-move {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .all-clean img {
+    width: 150px;
+    height: 150px;
+  }
+  .all-repair .re1 img {
+    width: 140px;
+    height: 130px;
+  }
+  .all-move .imgs {
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .all-move img {
+    /* margin: 0 90px; */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: #888888 3px 3px 9px;
+  }
+  .all-clean h5,
+  .all-move h5 {
+    padding: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .all-repair .re1 h5 {
+    padding: 10px;
+    direction: rtl;
+    font-size: medium;
+  }
+  .all-conect {
+    justify-content: space-around;
+    font-size: 15px;
+  }
+  .all-conect .links {
+    font-size: 10px;
+  }
 }
