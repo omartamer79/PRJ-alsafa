@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,27 +16,30 @@
   </head>
   <body>
     <header id="header">
-      <div class="toggle">
+      <div class="toggle" onclick = openMenu()>
         <i class="fa-solid fa-bars"></i>
       </div>
 
       <div class="dropdowin">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#header"
+          <a class="nav-link" aria-current="page" href="#header" onclick="openMenu()"
             >الصفحة الرئيسية</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#repair">صيانة المكيفات</a>
+          <a class="nav-link" href="#repair" onclick="openMenu()">صيانة المكيفات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#clean">تنظيف المنازل</a>
+          <a class="nav-link" href="#clean" onclick="openMenu()">تنظيف المنازل</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#move">نقل الأثاث</a>
+          <a class="nav-link" href="#move" onclick="openMenu()">نقل الأثاث</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#conect">تواصل معنا</a>
+          <a class="nav-link" href="#conect" onclick="openMenu()">تواصل معنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="we-are.html" onclick="openMenu()">من نحن</a>
         </li>
       </div>
       <!-------------------- navigation => Hero --------------->
@@ -183,6 +186,12 @@
         </div>
       </div>
     </section>
+    <!-- -------------Ended تواصل معنا------------------ -->
+    <!-- -------------Start Footer----------------------- -->
+     <footer>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nam ullam minus distinctio voluptate sapiente, placeat consequatur nisi amet repellat, illum corporis eum molestias suscipit iusto reiciendis odit assumenda facere, inventore fugit culpa ad eaque ipsam quod! Maxime odio, nisi iure labore eveniet ad deserunt, culpa itaque tempore ipsa velit ratione sapiente aspernatur id omnis facere, ipsum assumenda consequuntur. Voluptatibus nobis eveniet iure amet non commodi esse ut laboriosam, facilis recusandae dolorem error optio quidem ipsa saepe magni architecto provident ea facere reprehenderit laborum dolorum! Atque consequatur accusamus, debitis numquam odit quos suscipit dolorum dignissimos. Temporibus voluptate sit quod harum!</p>
+     </footer>
+
 
     <script src="js/script.js"></script>
     <script src="js/bootstap-main.js"></script>
