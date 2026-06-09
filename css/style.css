@@ -29,14 +29,16 @@ a {
 }
 .conection {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  z-index: 3;
+  bottom: 30px;
+  left: 10px;
 }
 .conection button {
   align-items: center;
   width: 50px;
   height: 50px;
   font-size: 25px;
+  margin: 5px;
   padding: 10px;
   font-weight: 600;
   border: none;
@@ -59,10 +61,8 @@ header {
   height: 90vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #38375f;
-  background-image: linear-gradient(to top right, #38375f 60%, #00bac0 40%);
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.082)),
+    linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.342)),
     url(/img/bg.png);
   border-radius: 0 0 120px 120px;
 }
@@ -128,7 +128,7 @@ nav ul li a:hover,
   text-shadow: #1eff00 1px 1px 20px;
 }
 
-/* ==========END NAVIGATION========= */
+/* ==========END DROPDOWN============= */
 /* ===========START HEADER============ */
 
 .all2 {
@@ -251,6 +251,7 @@ nav ul li a:hover,
 }
 .all-clean img {
   width: 400px;
+  height: 350px;
   border-radius: 50%;
   box-shadow: #888888 3px 3px 9px;
 }
@@ -287,6 +288,27 @@ nav ul li a:hover,
   display: flex;
   justify-content: space-around;
   font-size: 30px;
+}
+/* ===========Who We============== */
+nav a{
+    color: #078d0e;
+    font-size: 50px;
+    margin: 20px;
+    transition: 0.5s;
+}
+nav a:hover{
+    color: #1eff00;
+}
+.head-we{
+    width: 100%;
+    text-align: center;
+}
+.head-we img{
+    width: 50%;
+}
+.head-we p{
+    width: 70%;
+    margin: auto;
 }
 
 
