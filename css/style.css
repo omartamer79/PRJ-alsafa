@@ -63,7 +63,7 @@ header {
   background-size: cover;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.342)),
-    url(/img/bg.png);
+    url(img/bg.png);
   border-radius: 0 0 120px 120px;
 }
 .toggle {
